@@ -209,6 +209,9 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 
       var id = setElementId(element);
       var ClassicEditor = editorClassic.ClassicEditor;
+      if(element.value) {
+         element.value = element.value.replace(/class=("|')[^"']+("|')/g, "")
+      }
       ClassicEditor.create(element, editorConfig).then(function (editor) {
         Drupal.CKEditor5Instances.set(id, editor);
 

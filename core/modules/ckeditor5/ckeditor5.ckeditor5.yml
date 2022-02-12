@@ -587,3 +587,42 @@ media_library_mediaLibrary:
     conditions:
       filter: media_embed
       toolbarItem: drupalMedia
+
+ckeditor5_fontfamily:
+  ckeditor5:
+    plugins: [font.FontFamily]
+  drupal:
+    label: Font Family
+    library: core/ckeditor5.font
+    admin_library: ckeditor5/admin.basic
+    toolbar_items:
+      fontfamily:
+        label: Font Family
+    elements:
+      - <span>
+
+ckeditor5_fontcolor:
+  ckeditor5:
+    plugins: [font.FontColor]
+  drupal:
+    label: Font Color
+    library: core/ckeditor5.font
+    admin_library: ckeditor5/admin.basic
+    toolbar_items:
+      fontColor:
+        label: Font Color
+    elements:
+      - <span>
+
+ckeditor5_fontsize:
+  ckeditor5:
+    plugins: [font.FontSize]
+  drupal:
+    label: Font Size
+    library: core/ckeditor5.font
+    admin_library: ckeditor5/admin.basic
+    toolbar_items:
+      fontSize:
+        label: Font Size
+    elements:
+      - <span>

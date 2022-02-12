@@ -250,6 +250,18 @@ ckeditor5.language:
   dependencies:
     - core/ckeditor5
 
+ckeditor5.font:
+  remote: https://github.com/ckeditor/ckeditor5
+  version: "31.0.0"
+  license:
+    name: GNU-GPL-2.0-or-later
+    url: https://github.com/ckeditor/ckeditor5/blob/v31.0.0/LICENSE.md
+    gpl-compatible: true
+  js:
+    assets/vendor/ckeditor5/font.js: { preprocess: false, minified: true }
+  dependencies:
+    - core/ckeditor5
+
 css.escape:
   remote: https://github.com/mathiasbynens/CSS.escape
   version: "1.5.1"
