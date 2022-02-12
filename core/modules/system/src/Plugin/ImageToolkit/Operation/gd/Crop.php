@@ -86,6 +86,8 @@ class Crop extends GDImageToolkitOperationBase {
     ];
     if ($this->getToolkit()->apply('create_new', $data)) {
       if (imagecopyresampled($this->getToolkit()->getResource(), $original_resource, 0, 0, $arguments['x'], $arguments['y'], $arguments['width'], $arguments['height'], $arguments['width'], $arguments['height'])) {
+        $white = imagecolorallocate($this->getToolkit()->getResource(), 255, 255, 255);
+        imagefill($this->getToolkit()->getResource(), 0, 0, $white);
         imagedestroy($original_resource);
         return TRUE;
       }
